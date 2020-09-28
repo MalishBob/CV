@@ -1,1 +1,1 @@
-https://MalishBob.github.io/cv
+https://MalishBob.github.io/CV/
