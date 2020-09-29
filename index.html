@@ -7,8 +7,13 @@
     <title>Azad Mamedov | CV</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="assets/fontawesome/css/all.css" rel="stylesheet">
-    <script src="assets/js/script.js"></script>
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <script src="assets/js/jspdf/jspdf.js"></script>
+    <script src="assets/js/jspdf/dist/jspdf.min.js"></script>
+    <script src="assets/js/jspdf/plugins/from_html.js"></script>
+    <script src="assets/js/jspdf/plugins/split_text_to_size.js"></script>
+    <script src="assets/js/jspdf/plugins/standard_fonts_metrics.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
     <header>
@@ -53,6 +58,7 @@
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                        </p>
                     </div>
+                    <button class="btn-default" id="download_pdf">Download CV as PDF</button>
                 </div>
             </section>
             <section id="experience" class="section-block">

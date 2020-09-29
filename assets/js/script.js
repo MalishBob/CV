@@ -85,8 +85,6 @@ window.onload = function() {
 		})
 	}
 
-	
-
 	window.addEventListener('scroll', function(e){
 		elmSkills = document.getElementById('skills');
 		skillsWrap = elmSkills.querySelector('.skills-wrap');
@@ -96,5 +94,27 @@ window.onload = function() {
 			addSkills();
 		}
 	});
+
+	download_pdf.addEventListener('click', function(){
+		createPDF();
+	});
 }
 
+function createPDF(){
+	var doc = new jsPDF();          
+	var elementHandler = {
+	  '#ignorePDF': function (element, renderer) {
+	    return true;
+	  }
+	};
+	var source = window.document.getElementsByTagName("body")[0];
+	doc.fromHTML(
+	    source,
+	    15,
+	    15,
+	    {
+	      'width': 180,'elementHandlers': elementHandler
+	    });
+
+	doc.output("dataurlnewwindow");
+}
