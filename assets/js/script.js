@@ -127,7 +127,7 @@ function createPDF2() {
 	  filename:     'Azad_MAMEDOV_CV.pdf',
 	  image:        { type: 'jpeg', quality: 0.98 },
 	  html2canvas:  { scale: 1 },
-	  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+	  jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
 	};
 
 	// New Promise-based usage:
