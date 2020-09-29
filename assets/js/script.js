@@ -126,7 +126,7 @@ function createPDF2() {
 	  margin:       1,
 	  filename:     'Azad_MAMEDOV_CV.pdf',
 	  image:        { type: 'jpeg', quality: 0.98 },
-	  html2canvas:  { scale: 1 },
+	  html2canvas:  { scale: 0.5 },
 	  jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
 	};
 
@@ -134,6 +134,6 @@ function createPDF2() {
 	html2pdf().set(opt).from(element).save();
 
 	// Old monolithic-style usage:
-	html2pdf(element, opt);
+	// html2pdf(element, opt);
 
 }
