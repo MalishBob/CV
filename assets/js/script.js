@@ -72,8 +72,18 @@ function addSkills(){
 	}
 }
 
+function createPDF() {
+	var element = document.getElementById('toPrint');
+	var opt = {
+	  margin:       1,
+	  filename:     'Azad_MAMEDOV_CV.pdf',
+	  image:        { type: 'jpeg', quality: 0.98 },
+	  html2canvas:  { scale: 2 },
+	  jsPDF:        { unit: 'mm', format: [310, 390], orientation: 'portrait' }
+	};
 
-
+	html2pdf().set(opt).from(element).save();
+}
 
 window.onload = function() {
 	const anchors = document.querySelectorAll('a.scroll-to')
@@ -96,44 +106,6 @@ window.onload = function() {
 	});
 
 	download_pdf.addEventListener('click', function(){
-		createPDF2();
+		createPDF();
 	});
-}
-
-function createPDF(){
-	var doc = new jsPDF();          
-	var elementHandler = {
-	  '#ignorePDF': function (element, renderer) {
-	    return true;
-	  }
-	};
-	var source = window.document.getElementsByTagName("body")[0];
-	doc.fromHTML(
-	    source,
-	    15,
-	    15,
-	    {
-	      'width': 180,'elementHandlers': elementHandler
-	    });
-
-	doc.output("dataurlnewwindow");
-}
-
-function createPDF2() {
-
-	var element = document.getElementById('body');
-	var opt = {
-	  margin:       1,
-	  filename:     'Azad_MAMEDOV_CV.pdf',
-	  image:        { type: 'jpeg', quality: 0.98 },
-	  html2canvas:  { scale: 2 },
-	  jsPDF:        { unit: 'mm', format: [310, 390], orientation: 'portrait' }
-	};
-
-	// New Promise-based usage:
-	html2pdf().set(opt).from(element).save();
-
-	// Old monolithic-style usage:
-	// html2pdf(element, opt);
-
 }
