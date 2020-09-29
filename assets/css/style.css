@@ -145,11 +145,16 @@ main {
 	margin-top: 54px;
 }
 
+section {
+	height: 700px;
+}
+
 section#about {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
+	
 }
 
 section#about .about-block-1 {
@@ -184,8 +189,6 @@ section#about .about-block-1 .ava-wrapper img {
 	background-color: var(--second-color);
 	border-radius: 50%;
 }
-
-
 
 section#about .about-block-1 .position {
 	color: var(--main-text-color);
