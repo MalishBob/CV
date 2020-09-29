@@ -1,4 +1,4 @@
-/** @preserve
+/** preserve
  * jsPDF - PDF Document creation from JavaScript
  * Version ${versionID}
  *                           CommitID ${commitID}

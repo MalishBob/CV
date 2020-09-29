@@ -96,7 +96,7 @@ window.onload = function() {
 	});
 
 	download_pdf.addEventListener('click', function(){
-		createPDF();
+		createPDF2();
 	});
 }
 
@@ -117,4 +117,10 @@ function createPDF(){
 	    });
 
 	doc.output("dataurlnewwindow");
+}
+
+function createPDF2() {
+	var element = document.getElementById('body');
+	var worker = html2pdf();
+	var worker = html2pdf().from(element).save();
 }
