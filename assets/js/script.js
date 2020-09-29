@@ -120,7 +120,20 @@ function createPDF(){
 }
 
 function createPDF2() {
+
 	var element = document.getElementById('body');
-	var worker = html2pdf();
-	var worker = html2pdf().from(element).save();
+	var opt = {
+	  margin:       1,
+	  filename:     'Azad_MAMEDOV_CV.pdf',
+	  image:        { type: 'jpeg', quality: 0.98 },
+	  html2canvas:  { scale: 1 },
+	  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+	};
+
+	// New Promise-based usage:
+	html2pdf().set(opt).from(element).save();
+
+	// Old monolithic-style usage:
+	html2pdf(element, opt);
+
 }
