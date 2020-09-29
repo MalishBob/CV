@@ -79,7 +79,7 @@ function createPDF() {
 	  filename:     'Azad_MAMEDOV_CV.pdf',
 	  image:        { type: 'jpeg', quality: 0.98 },
 	  html2canvas:  { scale: 2 },
-	  jsPDF:        { unit: 'mm', format: [310, 415], orientation: 'portrait' }
+	  jsPDF:        { unit: 'mm', format: [310, 414], orientation: 'portrait' }
 	};
 
 	html2pdf().set(opt).from(element).save();
