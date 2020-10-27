@@ -26,9 +26,19 @@ const skillsArr = {
 const portfoliosArr = {
         'Java Script Vanilla': {
             1: {
-                'name': 'webdev',
+                'name': 'Webdev',
                 'link': 'https://malishbob.github.io/CV/portfolios/webdev/',
-                'prevew_image': ''
+                'prevew_image': 'assets/images/portfolios/webdev.png'
+            },
+            2: {
+                'name': 'Calculator',
+                'link': 'https://malishbob.github.io/CV/portfolios/calculator/',
+                'prevew_image': 'assets/images/portfolios/calculator.png'
+            },
+            3: {
+                'name': 'Momentum',
+                'link': 'https://malishbob.github.io/CV/portfolios/momentum/',
+                'prevew_image': 'assets/images/portfolios/momentum.png'
             }
         }
     }
@@ -48,6 +58,10 @@ function scrollToTargetAdjusted(element) {
         top: offsetPosition,
         behavior: "smooth"
     });
+}
+
+function addPortfolios() {
+
 }
 
 function addSkills() {
@@ -165,4 +179,5 @@ window.onload = function() {
     // Scroll to top
     window.addEventListener('scroll', trackScroll);
     goTopBtn.addEventListener('click', backToTop);
+    addPortfolios();
 }
