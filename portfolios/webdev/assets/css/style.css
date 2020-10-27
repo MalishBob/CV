@@ -1,5 +1,5 @@
-@font-face{font-family:Roboto-Regular;src:url(assets/fonts/Roboto-Regular.ttf)}
-@font-face{font-family:Roboto-Bold;src:url(assets/fonts/Roboto-Bold.ttf)}
+@font-face{font-family:Roboto-Regular;src:url(../fonts/Roboto-Regular.ttf)}
+@font-face{font-family:Roboto-Bold;src:url(../fonts/Roboto-Bold.ttf)}
 *,::before,::after{box-sizing:border-box}
 body,h1,h2,h3,h4,p,ul,ol,li,figure,figcaption,blockquote,dl,dd{margin:0;padding:0}
 body{min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}
@@ -14,7 +14,7 @@ h3{font-size:24px;letter-spacing:1px}
 button{display:block;background-color:#00AFDB;border:none;outline:none;text-transform:uppercase;color:#fff;font-size:14px;width:184px;height:46px;cursor:pointer}
 button:hover{background-color:#009CC2;transition:.25s}
 header{width:100%;height:100vh;min-height:600px;min-width:1600px;}
-header .wrapper{background:linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(assets/images/bg-image.jpg);background-size:cover;background-repeat:no-repeat;background-position:center;width:100%;height:100%;position:relative}
+header .wrapper{background:linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/bg-image.jpg);background-size:cover;background-repeat:no-repeat;background-position:center;width:100%;height:100%;position:relative}
 .logo{position:absolute;top:25px;left:50%;transform:translateX(-50%);width:44px;height:44px}
 .logo img{width:100%;height:100%;display:block}
 header nav{position:absolute;top:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;justify-content:center;align-items:center}
@@ -66,14 +66,14 @@ section .block_type_2 img{width:100%;height:auto;display:block}
 .slider_nav .arrow_next{border-bottom:none;border-left:none}
 .slider_nav .cur_slider_page{margin-left:6px;user-select:none}
 .slider_nav .total_slider_page{margin-right:6px}
-.section_5{background-size:cover;background-position:center;background-repeat:no-repeat;background:linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(assets/images/sign_up_bg.jpg);width:100%;height:524px;display:flex;flex-direction:row;justify-content:center}
+.section_5{background-size:cover;background-position:center;background-repeat:no-repeat;background:linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/sign_up_bg.jpg);width:100%;height:524px;display:flex;flex-direction:row;justify-content:center}
 .section_5 .wrapper{width:406px;margin-top:196px}
 .section_5 .wrapper h3{color:#fff;text-align:center;width:100%;margin-bottom:26px}
 .section_5 .wrapper .sign_form{display:flex;flex-direction:row;width:100%;height:46px}
 .section_5 .wrapper .sign_form input,.section_5 .wrapper .sign_form input:focus{display:block;width:340px;height:100%;border:none;background-color:#fff;padding:12px 24px;color:#373737;font-size:14px;}
 .section_5 .wrapper .sign_form input::placeholder{color:#373737;font-size:14px;opacity:0.5}
 .section_5 .wrapper .sign_form button{width:66px;height:100%;min-width:unset;padding:0}
-.check_icon{background-image:url(assets/images/fa-check.svg);background-size:19px 17px;background-position:center;background-repeat:no-repeat}
+.check_icon{background-image:url(../images/fa-check.svg);background-size:19px 17px;background-position:center;background-repeat:no-repeat}
 .section_6{display:flex;flex-direction:row;justify-content:center;align-items:center;padding-bottom:180px}
 .section_6 .wrapper{width:485px}
 .section_6 .wrapper h3{text-align:center}
@@ -82,8 +82,8 @@ section .block_type_2 img{width:100%;height:auto;display:block}
 .section_6 .wrapper .btn_wrap button{position:relative;text-align:left;width:186px;height:46px;min-width:unset;padding:0 17px}
 .section_6 .wrapper .btn_wrap button:nth-child(1){margin-right:30px}
 .section_6 .wrapper .btn_wrap button:after{content:'';width:59px;height:100%;position:absolute;top:0;right:0;background-color:#009CC2;background-position:center;background-repeat:no-repeat}
-.btn_applestore:after{background-image:url(assets/images/logo_apple.svg)}
-.btn_android:after{background-image:url(assets/images/logo_android.svg)}
+.btn_applestore:after{background-image:url(../images/logo_apple.svg)}
+.btn_android:after{background-image:url(../images/logo_android.svg)}
 footer{height:185px}
 footer .wrapper_1600{position:relative;background-color:#000;display:flex;flex-direction:row;justify-content:space-between;padding-top:73px}
 footer .logo{top:60px}
