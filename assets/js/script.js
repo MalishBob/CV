@@ -2,17 +2,15 @@
 //--------------------------------------------------------------------------------------
 const skillsArr = {
 	'CMS / Frameworks / library': {
-		'Bitrix': '80%',
-		'MODX': '90%',
-		'WordPress': '40%',
-		'Joomla': '40%',
-		'Simpla': '30%',
-		'UMI': '30%'
+		'ReactJS, Redux': '30%',
+		'React Components': '30%',
+		'Node JS': '10%',
+		'Bitrix, MODX, WordPress': '80%'
 	},
 	'Languages': {
-		'HTML': '95%',
-		'CSS': '90%',
-		'JavaScript': '30%',
+		'HTML5': '90%',
+		'CSS3': '90%',
+		'JavaScript ES6+': '30%',
 		'Jquery': '70%',
 		'PHP': '40%',
 		'SQL': '40%'
@@ -20,7 +18,8 @@ const skillsArr = {
 	'Personal': {
 		'linux': '40%',
 		'apache': '45%',
-		'nginx': '45%'
+		'nginx': '45%',
+		'git': '40%'
 	}
 }
 //--------------------------------------------------------------------------------------
@@ -61,7 +60,10 @@ function addSkills(){
 			skillItemElm = document.createElement("div");
 			skillItemElm.classList.add('skill-progress');
 			skillItemElm.innerHTML = `
-									<div class="skill-progress-title">${sect[item]} ${item}</div>
+									<div class="skill-progress-title">
+										<span class="skill-progress-title-percent">${sect[item]}</span>
+										<span class="skill-progress-title-item">${item}</span>
+									</div>
 									<div class="skill-progress-max"></div>
 									<div class="skill-progress-current" style="width: ${sect[item]};">
 										<div class="skill-progress-current-inner"></div>
