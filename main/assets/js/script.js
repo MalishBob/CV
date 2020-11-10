@@ -28,19 +28,41 @@ const portfoliosArr = {
             1: {
                 'name': 'Webdev',
                 'link': 'https://malishbob.github.io/CV/portfolios/webdev/',
-                'prevew_image': 'assets/images/portfolios/webdev.png'
+                'image': 'assets/images/portfolios/webdev.png'
             },
             2: {
                 'name': 'Calculator',
                 'link': 'https://malishbob.github.io/CV/portfolios/calculator/',
-                'prevew_image': 'assets/images/portfolios/calculator.png'
+                'image': 'assets/images/portfolios/calculator.png'
             },
             3: {
                 'name': 'Momentum',
                 'link': 'https://malishbob.github.io/CV/portfolios/momentum/',
-                'prevew_image': 'assets/images/portfolios/momentum.png'
+                'image': 'assets/images/portfolios/momentum.png'
+            },
+            4: {
+                'name': 'Virtual keyboard',
+                'link': 'https://malishbob.github.io/CV/portfolios/virtual-keyboard/',
+                'image': 'assets/images/portfolios/virtual-keyboard.png'
             }
-        }
+        },
+        // 'React': {
+        //     1: {
+        //         'name': '',
+        //         'link': '',
+        //         'image': ''
+        //     },
+        //     2: {
+        //         'name': '',
+        //         'link': '',
+        //         'image': ''
+        //     },
+        //     3: {
+        //         'name': '',
+        //         'link': '',
+        //         'image': ''
+        //     }
+        // }
     }
     //--------------------------------------------------------------------------------------
     //--------------------------------------------------------------------------------------
@@ -61,7 +83,43 @@ function scrollToTargetAdjusted(element) {
 }
 
 function addPortfolios() {
+    portfoliosWrap = document.querySelector(".portfolios-wrapper");
 
+    for (var section in portfoliosArr) {
+
+        if (section.length > 0) {
+            sectionTitle = addElm('h3', 'portfolios-title');
+            sectionTitle.innerHTML = section;
+        }
+
+        portfoliosList = addElm('div', 'portfolios-list');
+        sect = portfoliosArr[section];
+
+        for (var item in sect) {
+            if (sect[item]['image'].length > 0) {
+                portfoliosItem = addElm('div', 'portfolios-list-item');
+                portfoliosItemLink = addElm('a');
+                portfoliosItemImgWrap = addElm('div', 'portfolios-list-item-img');
+                portfoliosItemImg = addElm('img');
+                portfoliosItemName = addElm('div', 'portfolios-list-item-name');
+
+                portfoliosItemImg.src = sect[item]['image'];
+                portfoliosItemImg.alt = sect[item]['name'];
+                portfoliosItemLink.href = sect[item]['link'];
+                portfoliosItemLink.setAttribute('target', '_blank');
+                portfoliosItemName.innerHTML = sect[item]['name'];
+
+                portfoliosItemImgWrap.appendChild(portfoliosItemImg);
+                portfoliosItemLink.appendChild(portfoliosItemImgWrap);
+                portfoliosItemLink.appendChild(portfoliosItemName);
+                portfoliosItem.appendChild(portfoliosItemLink);
+                portfoliosList.appendChild(portfoliosItem);
+            }
+        }
+
+        portfoliosWrap.appendChild(sectionTitle);
+        portfoliosWrap.appendChild(portfoliosList);
+    }
 }
 
 function addSkills() {
@@ -70,19 +128,15 @@ function addSkills() {
     for (var section in skillsArr) {
         i++;
 
-        skillItemSect = document.createElement("div");
-        skillItemSect.classList.add('skills-block');
-        skillItemSect.classList.add('skills-block-' + i);
+        skillItemSect = addElm('div', 'skills-block skills-block-' + i);
         skillItemSect.innerHTML = `<h4>${section}</h4>`;
-
         document.querySelector('.skills-wrap').appendChild(skillItemSect);
 
         sect = skillsArr[section];
         for (var item in sect) {
             j++;
 
-            skillItemElm = document.createElement("div");
-            skillItemElm.classList.add('skill-progress');
+            skillItemElm = addElm('div', 'skill-progress');
             skillItemElm.innerHTML = `
 									<div class="skill-progress-title">
 										<span class="skill-progress-title-percent">${sect[item]}</span>
@@ -128,6 +182,12 @@ function backToTop() {
         window.scrollBy(0, -80);
         setTimeout(backToTop, 5);
     }
+}
+
+function addElm(elm, classes = '') {
+    let element = document.createElement(elm);
+    if (classes) element.classList.add(...classes.split(' '));
+    return element;
 }
 
 window.onload = function() {
