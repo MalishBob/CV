@@ -44,6 +44,11 @@ const portfoliosArr = {
                 'name': 'Virtual keyboard',
                 'link': 'https://malishbob.github.io/CV/portfolios/virtual-keyboard/',
                 'image': 'assets/images/portfolios/virtual-keyboard.png'
+            },
+            5: {
+                'name': 'Pure water',
+                'link': 'https://malishbob.github.io/CV/portfolios/pure-water/',
+                'image': 'assets/images/portfolios/pure-water.png'
             }
         },
         // 'React': {
