@@ -320,6 +320,21 @@ section#about .about-block-2 .about-text {
     margin: 0 auto;
 }
 
+.contact-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+.contact-photo {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    background-color: var(--second-color);
+    border-radius: 10px;
+}
+
 .experience-wrap {
     display: flex;
     justify-content: space-between;
@@ -647,6 +662,40 @@ header nav.mobile .mobile-ava-wrapper img {
     letter-spacing: 1px;
 }
 
+ul.contact-items {
+    width: 320px;
+}
+
+ul.contact-items li {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    line-height: 2.5;
+    border-bottom: 1px dashed #bbb;
+}
+
+ul.contact-items a,
+ul.contact-items a:visited {
+    color: var(--second-color);
+}
+
+ul.contact-items .contact-item-name {
+    font-weight: bold;
+}
+
+ul.language-items {
+    font-size: 18px;
+}
+
+ul.language-items li {
+    line-height: 2;
+}
+
+.language-item-name {
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1200px) {
     .main-wrapper {
         width: 100%;
@@ -730,6 +779,15 @@ header nav.mobile .mobile-ava-wrapper img {
     .back_to_top:hover {
         background-color: rgba(125, 125, 125, 0.5);
     }
+    .portfolios-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contact-photo {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -751,6 +809,9 @@ header nav.mobile .mobile-ava-wrapper img {
         width: 100%;
         margin-bottom: 20px;
     }
+    .portfolios-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -771,5 +832,15 @@ header nav.mobile .mobile-ava-wrapper img {
     }
     footer .copyright {
         font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolios-list-item-name {
+        font-size: 14px;
+    }
+    ul.contact-items {
+        width: 100%;
+        font-size: 14px;
     }
 }

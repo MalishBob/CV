@@ -2,24 +2,25 @@
 //--------------------------------------------------------------------------------------
 const skillsArr = {
     'CMS / Frameworks / library': {
-        'ReactJS, Redux': '30%',
-        'React Components': '30%',
-        'Node JS': '10%',
-        'Bitrix, MODX, WordPress': '80%'
+        'ReactJS, Redux': '5%',
+        'React Components': '5%',
+        'Node JS': '5%',
+        'Bitrix, MODX, WordPress': '70%'
     },
     'Languages': {
         'HTML5': '90%',
         'CSS3': '90%',
-        'JavaScript ES6+': '30%',
+        'JavaScript ES6+': '40%',
         'Jquery': '70%',
         'PHP': '40%',
         'SQL': '40%'
     },
-    'Personal': {
+    'Other': {
         'linux': '40%',
         'apache': '45%',
         'nginx': '45%',
-        'git': '40%'
+        'git': '40%',
+        'webpack': '5%'
     }
 }
 
@@ -158,6 +159,7 @@ function addSkills() {
 }
 
 function createPDF() {
+    addSkills();
     var element = document.getElementById('toPrint');
     var opt = {
         margin: 1,
@@ -244,5 +246,7 @@ window.onload = function() {
     // Scroll to top
     window.addEventListener('scroll', trackScroll);
     goTopBtn.addEventListener('click', backToTop);
+
+
     addPortfolios();
 }
