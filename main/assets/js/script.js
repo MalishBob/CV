@@ -159,7 +159,6 @@ function addSkills() {
 }
 
 function createPDF() {
-    addSkills();
     var element = document.getElementById('toPrint');
     var opt = {
         margin: 1,
@@ -219,6 +218,7 @@ window.onload = function() {
     });
 
     download_pdf.addEventListener('click', function() {
+        addSkills();
         createPDF();
     });
 
